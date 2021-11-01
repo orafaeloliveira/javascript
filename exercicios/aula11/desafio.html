@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    <p>Onde você nasceu?</p>
+    <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Checar" onclick="verificar()">
+    <div id="result">
+
+    </div>
+    <script>
+        function verificar() {
+            /**
+                var txtpais = window.document.querySelector('input#txtpais')
+                var pais = txtpais.value.toLowerCase()
+            */
+           //armazenando de uma vez o valor digitado na váriavel em minúsculas
+            var pais = (window.document.querySelector('input#txtpais').value.toLowerCase())
+            var result = window.document.querySelector('div#result')
+            
+            if (pais != 'brasil') {
+                result.innerHTML = `Você nasceu em <strong>${pais}</strong>, logo é estrangeiro.`
+            } else {
+                result.innerHTML = `Você nasceu em <strong>${pais}</strong>, logo é brasileiro`
+            }
+        }
+    </script>
+</body>
+</html>

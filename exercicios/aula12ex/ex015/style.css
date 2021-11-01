@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    background-color: #3D82D5;
+}
+
+header > h1 {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+section#card {
+    text-align: left;
+    max-width: 500px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    font-size: 1.2em;
+    color: black;
+}
+
+div > p{
+    color: black;
+}
+
+div#res {
+    text-align: center;
+    line-height: 40px;
+}
+
+footer > p {
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.mb {
+    margin-bottom: 10px;
+}

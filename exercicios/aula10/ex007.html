@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res"></div>
+    <script>
+        function somar(){
+            //guardando os valores dos inputs, com getElement e querySelector
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.querySelector('input#txtn2')
+            //guardando o conteúdo da div#res
+            var res = window.document.getElementById('res')
+            //convertendo as strings do input para números inteiros, com Number e NUmber.parseInt
+            var n1 = Number.parseInt(tn1.value)
+            var n2 = Number(tn2.value)
+            //fazendo a soma e atribuido o resultado a variável s
+            var s = n1 + n2
+            //escrevendo o resultado na div#res
+            res.innerHTML = `O resuldado da soma de ${n1} + ${n2} é igual a <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>

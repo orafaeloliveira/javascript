@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(44, 66, 190);
+            color: white;
+            font: normal 18pt Arial
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div name="msg">Clique em mim</div>
+    <script>
+        //guardando o que está nos parágrafos do documento HTML
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var p2 = window.document.getElementsByTagName('p')[1]
+        //escrevendo no documento o valor armazenado em p1
+        window.document.write('Está escrito no primeiro parágrafo: ' + p1.innerText)
+        //alterando a cor do parágrafo para preto e negrito
+        p1.style.color = 'black'
+        p1.style.fontWeight = 'bold'
+        //escrevendo no documento o segundo parágrafo incluindo a formatação HTML
+        document.write(p2.innerHTML)
+        /**
+            //guardando na variável o que está no elemento com id msg
+            var d = window.document.getElementById('msg')
+            //alterando a cor de fundo e o texto do elemento
+            d.style.background = 'green'
+            d.innerText = 'Estou aguardando...'
+            //outra maneira de mudar o fundo e o texto
+            window.document.getElementById('msg').innerText = 'Olá'
+            window.document.getElementById('msg').style.background = 'red'
+            //selecionando por nome
+            var d = window.document.getElementsByName('msg')[0]
+            d.innerText = 'Mundo'
+            //por classe
+            var d = window.document.getElementsByClassName('msg')[0]
+            d.innerText = '!'
+        */
+    </script>
+</body>
+</html>
